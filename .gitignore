@@ -1,3 +1,10 @@
+# Individualized puzzle inputs
+input/
+
+# Examples as presented in problem statement
+example/
+
+### Standard Python gitignore follows ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
