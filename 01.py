@@ -1,7 +1,12 @@
 """Simple script to solve Day 1"""
 
-from sys import argv
-fIn = open('input/01.txt' if len(argv)<2 else argv[1],'r')
+from sys import argv, exit
+fName = 'input/01.txt' if len(argv)<2 else argv[1]
+try:
+	fIn = open(fName,'r')
+except FileNotFoundError:
+	print("Error in {}: File {} was not found".format(__file__, fName))
+	exit(-1)
 
 # Use set for entries, dict for {(sums of 2 entries):(first entry)}
 ents = set()

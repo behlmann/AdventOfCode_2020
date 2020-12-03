@@ -1,7 +1,12 @@
 """Simple script to solve Day 2"""
 
-from sys import argv
-fIn = open('input/02.txt' if len(argv)<2 else argv[1],'r')
+from sys import argv, exit
+fName = 'input/02.txt' if len(argv)<2 else argv[1]
+try:
+	fIn = open(fName,'r')
+except FileNotFoundError:
+	print("Error in {}: File {} was not found".format(__file__, fName))
+	exit(-1)
 
 nValid1, nValid2 = 0, 0
 # Read input line by line
